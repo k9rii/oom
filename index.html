@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>상품 카테고리 분류 대시보드</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif; 
+      margin: 0;
+      padding: 0;
+      background-color: #eef1f5;
+      color: #333;
+    }
+    .header {
+      background-color: #2c3e50;
+      padding: 30px 40px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .title-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .header .title-info h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .header .title-info p {
+      margin: 5px 0 0;
+      font-size: 16px;
+      color: #bdc3c7;
+    }
+    .header .team-info {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f1c40f;
+      padding: 5px 10px;
+      background-color: #34495e;
+      border-radius: 5px;
+      align-self: flex-start;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    .card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 22px;
+      color: #34495e;
+      border-bottom: 2px solid #ecf0f1;
+      padding-bottom: 15px;
+    }
+    .card p {
+      line-height: 1.6;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .iframe-container {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+      .header .title-info {
+        align-items: center;
+      }
+      .header .title-info h1 {
+        font-size: 24px;
+      }
+      .header .team-info {
+        align-self: center;
+        margin-top: 10px;
+      }
+      .container {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="title-info">
+      <h1>상품 카테고리 분류 대시보드</h1>
+      <p>2025 AI융합 문제발굴 산학연계해커톤</p>
+    </div>
+    <span class="team-info">우움</span>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>대/중/소 분류 카테고리 계층 구조</h2>
+      <p>
+        주어진 2,282,542건의 데이터셋은 다음과 같은 대분류(2종), 중분류(22종), 소분류(198종)의 계층 형태를 가지고 있음을 파악했습니다. 이 구조는 모델의 예측 범위를 좁히는 계층적 분류 모델의 기반이 됩니다.
+      </p>
+      <div class="image-container">
+        <img src="image.png" alt="카테고리 계층 트리 구조">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>브랜드별 소분류 매핑 분석</h2>
+      <div class="iframe-container">
+        <iframe src="https://public.tableau.com/views/__17557602175290/sheet1?:showVizHome=no&:embed=true"
+                width="100%" height="800" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
